@@ -1,9 +1,9 @@
-module github.com/hashjaco/go-websockets-tut
+module github.com/hashjaco/GO-MICROS
 
 go 1.15
 
 require (
-	github.com/gin-gonic/gin v1.6.3 // indirect
+	github.com/gin-gonic/gin v1.6.3
 	github.com/go-chi/chi v4.1.2+incompatible // indirect
 	github.com/go-chi/render v1.0.1 // indirect
 	github.com/go-playground/validator/v10 v10.3.0 // indirect
