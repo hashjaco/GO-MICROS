@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bfabe99e-d57f-47e9-ac12-c02de7e83afc" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+        <option value="Go Application" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="/usr/local/go" />
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
+  </component>
+  <component name="ProjectId" id="1gLHrJLC5r6vjIKhZ3dXveghAu7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultGoTemplateProperty" value="Go Application" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../GO-MICROS/application" />
+      <recent name="$PROJECT_DIR$/../GO-MICROS/database/models" />
+      <recent name="$PROJECT_DIR$/../GO-MICROS/database" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="GO-MICROS" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$" />
+      <package value="github.com/hashjaco/go-websockets-tut" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
+      <module name="GO-MICROS" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <framework value="gotest" />
+      <kind value="DIRECTORY" />
+      <package value="github.com/hashjaco/go-websockets-tut" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bfabe99e-d57f-47e9-ac12-c02de7e83afc" name="Default Changelist" comment="" />
+      <created>1597887151942</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1597887151942</updated>
+      <workItem from="1597887153867" duration="1636000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-2554" y="376" key="#SQL_Dialects" timestamp="1597908619195">
+      <screen x="-2560" y="0" width="2560" height="1080" />
+    </state>
+    <state x="-2554" y="376" key="#SQL_Dialects/-2560.0.2560.1080/0.0.1440.900@-2560.0.2560.1080" timestamp="1597908619195" />
+    <state x="-2365" y="205" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597908555217">
+      <screen x="-2560" y="0" width="2560" height="1080" />
+    </state>
+    <state x="-2365" y="205" key="#com.intellij.execution.impl.EditConfigurationsDialog/-2560.0.2560.1080/0.0.1440.900@-2560.0.2560.1080" timestamp="1597908555217" />
+    <state x="-1771" y="179" key="SettingsEditor" timestamp="1597898465218">
+      <screen x="-2560" y="0" width="2560" height="1080" />
+    </state>
+    <state x="-1771" y="179" key="SettingsEditor/-2560.0.2560.1080/0.0.1440.900@-2560.0.2560.1080" timestamp="1597898465218" />
+  </component>
+</project>
