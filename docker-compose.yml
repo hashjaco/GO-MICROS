@@ -1,0 +1,25 @@
+version: '3'
+services:
+  db:
+    build:
+      context: ./database
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: demo_db
+      MYSQL_USER: granular_godd
+      MYSQL_PASSWORD: granular_godd
+    container_name: granular_db
+    ports:
+    - "5432:5432"
+    tty: true
+  app:
+    build:
+      context: go-rest-api
+    volumes:
+    - "./go-rest-api:/app"
+    container_name: granular_app
+    ports:
+    - "8081:8081"
+    tty: true
+    depends_on:
+      - db

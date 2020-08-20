@@ -1,7 +1,6 @@
-package models
+package users
 
 import (
-	"net/http"
 	"time"
 )
 
@@ -15,11 +14,3 @@ type User struct {
 	UpdatedOn time.Time `json:"updated_on"`
 }
 
-func (app *App) InitRouter(){
-	app.Router.Methods("GET").Path("/users").HandlerFunc(app.getUsers)
-}
-
-func (app *App) getUsers(w http.ResponseWriter, r *http.Request){
-	users := &User{}
-
-}

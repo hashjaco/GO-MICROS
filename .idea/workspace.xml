@@ -33,7 +33,7 @@
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="SQL Dialects" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -84,17 +84,17 @@
     <integration-enabled>true</integration-enabled>
   </component>
   <component name="WindowStateProjectService">
-    <state x="-2554" y="376" key="#SQL_Dialects" timestamp="1597908619195">
+    <state x="-2554" y="376" key="#SQL_Dialects" timestamp="1597910230810">
       <screen x="-2560" y="0" width="2560" height="1080" />
     </state>
-    <state x="-2554" y="376" key="#SQL_Dialects/-2560.0.2560.1080/0.0.1440.900@-2560.0.2560.1080" timestamp="1597908619195" />
+    <state x="-2554" y="376" key="#SQL_Dialects/-2560.0.2560.1080/0.0.1440.900@-2560.0.2560.1080" timestamp="1597910230810" />
     <state x="-2365" y="205" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597908555217">
       <screen x="-2560" y="0" width="2560" height="1080" />
     </state>
     <state x="-2365" y="205" key="#com.intellij.execution.impl.EditConfigurationsDialog/-2560.0.2560.1080/0.0.1440.900@-2560.0.2560.1080" timestamp="1597908555217" />
-    <state x="-1771" y="179" key="SettingsEditor" timestamp="1597898465218">
+    <state x="-1771" y="179" key="SettingsEditor" timestamp="1597916836333">
       <screen x="-2560" y="0" width="2560" height="1080" />
     </state>
-    <state x="-1771" y="179" key="SettingsEditor/-2560.0.2560.1080/0.0.1440.900@-2560.0.2560.1080" timestamp="1597898465218" />
+    <state x="-1771" y="179" key="SettingsEditor/-2560.0.2560.1080/0.0.1440.900@-2560.0.2560.1080" timestamp="1597916836333" />
   </component>
 </project>
