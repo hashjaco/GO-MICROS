@@ -20,17 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfabe99e-d57f-47e9-ac12-c02de7e83afc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/go-rest-api/app/url_mappings.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go-rest-api/controllers/users/users.controller.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/GO-MICROS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GO-MICROS.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go-rest-api/controllers/users/users_controller.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go-rest-api/domain/users/user_dao.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go-rest-api/domain/users/user_dto.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go-rest-api/services/users_service.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go-rest-api/utils/errors/errors.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-rest-api/app/application.go" beforeDir="false" afterPath="$PROJECT_DIR$/go-rest-api/app/application.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-rest-api/controllers/users.controller.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-rest-api/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/go-rest-api/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-rest-api/app.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-rest-api/app/url_mappings.go" beforeDir="false" afterPath="$PROJECT_DIR$/go-rest-api/app/url_mappings.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-rest-api/controllers/users/users.controller.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-rest-api/domain/users/user.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-rest-api/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-rest-api/services/users.service.go" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +72,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/go-rest-api" />
       <recent name="$PROJECT_DIR$/go-rest-api/controllers/user" />
       <recent name="$PROJECT_DIR$/application" />
       <recent name="$PROJECT_DIR$/database/models" />
