@@ -1,19 +1,19 @@
 package main
 
-//func homePage(w http.ResponseWriter, r *http.Request){
-//    fmt.Fprintf(w, "Homepage Endpoint Hit")
-//}
-//
-//func handleRequests(){
-//	router := mux.NewRouter().StrictSlash(true)
-//
-//	router.HandleFunc("/", homePage)
-//	//router.HandleFunc("/users", allUsers).Methods("GET")
-//	//router.HandleFunc("/users", postUser).Methods("POST")
-//	log.Fatal(http.ListenAndServe(":8081", router))
-//}
+import (
+	"github.com/hashjaco/GO-MICROS/go-rest-api/app"
+	"github.com/joho/godotenv"
+	"log"
+)
 
+// init is invoked before main()
+func init() {
+	// loads values from .env into the system
+	if err := godotenv.Load(); err != nil {
+		log.Print("No .env file found")
+	}
+}
 
 func main() {
-	//handleRequests()
+	app.StartApplication()
 }
