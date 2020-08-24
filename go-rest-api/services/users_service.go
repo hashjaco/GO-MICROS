@@ -3,17 +3,25 @@ package services
 import (
 	"fmt"
 	"github.com/hashjaco/GO-MICROS/go-rest-api/domain/users"
+	"github.com/hashjaco/GO-MICROS/go-rest-api/utils/date_utils"
 	"github.com/hashjaco/GO-MICROS/go-rest-api/utils/errors"
 )
 
-func GetUsers() {
+func GetAllUsers(userTable users.Users) (*users.Users, *errors.RestErr) {
+
+	result := &users.Users{}
+	if err := result.GetAll(); err != nil {
+		return nil, err
+	}
+
+	return result, nil
 }
 
-func GetUser(userID int64) (*users.User, *errors.RestErr){
-	if userID <= 0 {
-		return nil, errors.NewBadRequestError(fmt.Sprintf("%d is an invalid user ID", userID))
+func GetUser(userId int64) (*users.User, *errors.RestErr){
+	if userId <= 0 {
+		return nil, errors.NewBadRequestError(fmt.Sprintf("%d is an invalid user ID", userId))
 	}
-	result := &users.User{ID: userID}
+	result := &users.User{ID: userId}
 	if err := result.Get(); err != nil {
 		return nil, err
 	}
@@ -25,6 +33,8 @@ func CreateUser(user users.User) (*users.User, *errors.RestErr){
 		return nil, err
 	}
 
+	user.CreatedOn = date_utils.GetNowDBFormat()
+	user.UpdatedOn = date_utils.GetNowDBFormat()
 	if err := user.Save(); err != nil {
 		return nil, err
 	}

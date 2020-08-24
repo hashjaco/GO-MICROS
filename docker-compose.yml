@@ -1,16 +1,20 @@
 version: '3'
 services:
   db:
-    build:
-      context: ./database
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: demo_db
-      MYSQL_USER: granular_godd
-      MYSQL_PASSWORD: granular_godd
     container_name: granular_db
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+
+    build:
+      context: go-rest-api/database
+    environment:
+      MYSQL_ROOT_PASSWORD: Ilikethenumber69!
+      MYSQL_DATABASE: users_db
+      MYSQL_USER: root
+      ACCEPT_EULA: "Y"
     ports:
-    - "5432:5432"
+    - "3306:3306"
     tty: true
   app:
     build:
@@ -19,7 +23,7 @@ services:
     - "./go-rest-api:/app"
     container_name: granular_app
     ports:
-    - "8081:8081"
+    - "8080:8080"
     tty: true
     depends_on:
       - db

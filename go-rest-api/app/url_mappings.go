@@ -5,7 +5,7 @@ import (
 )
 
 func mapUrls() {
-	router.GET("/users", users.GetUsers)
+	router.GET("/users", users.GetAllUsers)
 	router.GET("/users/:user_id", users.GetUser)
 	router.POST("/users", users.CreateUser)
 }

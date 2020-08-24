@@ -1,5 +1,8 @@
-FROM golang:latest
+FROM golang:1.15-alpine3.12
 
-RUN apt-get update
-RUN apt-get install vim -y
-RUN go get "github.com/go-sql-driver/mysql"
+RUN mkdir /app
+ADD . /app
+WORKDIR /app
+RUN go build -o main .
+
+CMD ["/app/main"]

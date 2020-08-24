@@ -9,19 +9,34 @@ import (
 	"strconv"
 )
 
-func GetUsers(c *gin.Context){
-	c.String(http.StatusOK, "Users retrieved")
-}
+/**
+* Handle GET requests to return all users
+**/
+func GetAllUsers(c *gin.Context){
+	var userTable users.Users
 
-func GetUser(c *gin.Context){
-	userID, userErr := strconv.ParseInt(c.Param("user_id"), 10, 64)
-	if userErr != nil {
-		err := errors.NewBadRequestError("Invalid user ID")
+	allUsers, err := services.GetAllUsers(userTable)
+	if err != nil {
 		c.JSON(err.Status, err)
-		return
 	}
 
-	user, getErr := services.GetUser(userID)
+	c.JSON(http.StatusOK, allUsers)
+}
+
+/**
+* Handle GET requests with ID parameter
+**/
+func GetUser(c *gin.Context){
+	// parse integer64 value passed into endpoint as a parameter and store in userID variable
+	userId, userErr := strconv.ParseInt(c.Param("user_id"), 10, 64)
+
+	// return error status code and message if userErr is defined above
+	if userErr != nil {
+		err := errors.NewBadRequestError("Invalid user id")
+		c.JSON(err.Status, err)
+	}
+
+	user, getErr := services.GetUser(userId)
 	if getErr != nil {
 		c.JSON(getErr.Status, getErr)
 	}
@@ -29,6 +44,9 @@ func GetUser(c *gin.Context){
 	c.JSON(http.StatusOK, user)
 }
 
+/**
+* Handle POST requests
+**/
 func CreateUser(c *gin.Context){
 	var user users.User
 	if err := c.ShouldBindJSON(&user); err != nil {
@@ -42,6 +60,7 @@ func CreateUser(c *gin.Context){
 		c.JSON(saveErr.Status, saveErr)
 		return
 	}
+
 	c.JSON(http.StatusCreated, result)
 }
 
