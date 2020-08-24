@@ -20,29 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfabe99e-d57f-47e9-ac12-c02de7e83afc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go-rest-api/config/db_config.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go-rest-api/database/mysql/users_db/users_db.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go-rest-api/utils/date_utils/date_utils.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go-rest-api/utils/mysql_utils/mysql_utils.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/go-rest-api/database/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/database.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/user_schema.down.sql" beforeDir="false" afterPath="$PROJECT_DIR$/go-rest-api/database/migrations/user_schema.down.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/user_schema.up.sql" beforeDir="false" afterPath="$PROJECT_DIR$/go-rest-api/database/migrations/user_schema.up.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-rest-api/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/go-rest-api/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-rest-api/app/application.go" beforeDir="false" afterPath="$PROJECT_DIR$/go-rest-api/app/application.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-rest-api/app/url_mappings.go" beforeDir="false" afterPath="$PROJECT_DIR$/go-rest-api/app/url_mappings.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-rest-api/controllers/users/users_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/go-rest-api/controllers/users/users_controller.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-rest-api/domain/users/user_dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/go-rest-api/domain/users/user_dao.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-rest-api/domain/users/user_dto.go" beforeDir="false" afterPath="$PROJECT_DIR$/go-rest-api/domain/users/user_dto.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-rest-api/services/users_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/go-rest-api/services/users_service.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-rest-api/utils/errors/errors.go" beforeDir="false" afterPath="$PROJECT_DIR$/go-rest-api/utils/errors/errors.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-rest-api/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-rest-api/database/Dockerfile" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,11 +65,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/go-rest-api" />
       <recent name="$PROJECT_DIR$/go-rest-api/controllers/user" />
       <recent name="$PROJECT_DIR$/application" />
       <recent name="$PROJECT_DIR$/database/models" />
-      <recent name="$PROJECT_DIR$/database" />
     </key>
   </component>
   <component name="RunManager" selected="Go Build.go build main.go ">

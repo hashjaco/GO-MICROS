@@ -1,29 +1,50 @@
 version: '3'
 services:
-  db:
-    container_name: granular_db
+  go_api:
+    build:
+      context: go-rest-api
+    volumes:
+      - "api:/usr/src/app/"
+    container_name: GO-MICROS
+    ports:
+      - "8080:8080"
+    tty: true
+    depends_on:
+      - db
+    networks:
+      - go_rest
+
+
+  mysql_db:
+    container_name: mysql_db
     image: mysql
     command: --default-authentication-plugin=mysql_native_password
     restart: always
-
     build:
       context: go-rest-api/database
     environment:
-      MYSQL_ROOT_PASSWORD: Ilikethenumber69!
-      MYSQL_DATABASE: users_db
-      MYSQL_USER: root
+      - MYSQL_ROOT_HOST=${MYSQL_USERS_HOST}
+      - MYSQL_USER=${MYSQL_USERS_USERNAME}
+      - MYSQL_PASSWORD=${MYSQL_USERS_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_USERS_SCHEMA}
+      - MYSQL_ROOT_PASSWORD=${MYSQL_USERS_PASSWORD}
+      volumes:
+        - "mysql_db:/var/lib/mysql"
       ACCEPT_EULA: "Y"
     ports:
     - "3306:3306"
     tty: true
-  app:
-    build:
-      context: go-rest-api
-    volumes:
-    - "./go-rest-api:/app"
-    container_name: granular_app
-    ports:
-    - "8080:8080"
-    tty: true
-    depends_on:
-      - db
+    networks:
+      - go_rest
+
+
+
+
+volumes:
+  api:
+  mysql_db:
+
+# Networks to be created to facilitate communication between containers
+networks:
+  go_rest:
+    driver: bridge
