@@ -20,11 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfabe99e-d57f-47e9-ac12-c02de7e83afc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go-rest-api/database/data/users" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go-rest-api/database/mysql/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/go-rest-api/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-rest-api/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-rest-api/database/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-rest-api/controllers/users/users_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/go-rest-api/controllers/users/users_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-rest-api/database/migrations/user_schema.up.sql" beforeDir="false" afterPath="$PROJECT_DIR$/go-rest-api/database/migrations/user_schema.up.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-rest-api/services/users_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/go-rest-api/services/users/users_service.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,11 +68,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/go-rest-api/services/users" />
+      <recent name="$PROJECT_DIR$/go-rest-api/database" />
+      <recent name="$PROJECT_DIR$/go-rest-api/database/mysql" />
       <recent name="$PROJECT_DIR$/go-rest-api" />
-      <recent name="$PROJECT_DIR$/go-rest-api/controllers/user" />
-      <recent name="$PROJECT_DIR$/application" />
-      <recent name="$PROJECT_DIR$/database/models" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager" selected="Go Build.go build main.go ">
@@ -171,10 +174,10 @@
     <state x="-2365" y="205" width="1071" height="701" key="#com.intellij.execution.impl.EditConfigurationsDialog/-2560.0.2560.1080/0.0.1440.900@-2560.0.2560.1080" timestamp="1598004447157" />
     <state x="-1952" y="186" key="#com.intellij.execution.impl.EditConfigurationsDialog/-2560.23.2560.1057/0.23.1440.877@-2560.23.2560.1057" timestamp="1598066712608" />
     <state x="342" y="139" width="985" height="731" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1598261937281" />
-    <state x="425" y="259" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598246906938">
+    <state x="425" y="259" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598293841658">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="425" y="259" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1598246906938" />
+    <state x="425" y="259" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1598293841658" />
     <state x="-1875" y="311" width="619" height="480" key="#xdebugger.XInspectDialog" timestamp="1598069413950">
       <screen x="-2560" y="23" width="2560" height="1057" />
     </state>

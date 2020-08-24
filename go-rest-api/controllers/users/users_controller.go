@@ -3,7 +3,7 @@ package users
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/hashjaco/GO-MICROS/go-rest-api/domain/users"
-	"github.com/hashjaco/GO-MICROS/go-rest-api/services"
+	users2 "github.com/hashjaco/GO-MICROS/go-rest-api/services/users"
 	"github.com/hashjaco/GO-MICROS/go-rest-api/utils/errors"
 	"net/http"
 	"strconv"
@@ -15,7 +15,7 @@ import (
 func GetAllUsers(c *gin.Context){
 	var userTable users.Users
 
-	allUsers, err := services.GetAllUsers(userTable)
+	allUsers, err := users2.GetAllUsers(userTable)
 	if err != nil {
 		c.JSON(err.Status, err)
 	}
@@ -36,7 +36,7 @@ func GetUser(c *gin.Context){
 		c.JSON(err.Status, err)
 	}
 
-	user, getErr := services.GetUser(userId)
+	user, getErr := users2.GetUser(userId)
 	if getErr != nil {
 		c.JSON(getErr.Status, getErr)
 	}
@@ -55,7 +55,7 @@ func CreateUser(c *gin.Context){
 		return
 	}
 
-	result, saveErr := services.CreateUser(user)
+	result, saveErr := users2.CreateUser(user)
 	if saveErr != nil {
 		c.JSON(saveErr.Status, saveErr)
 		return

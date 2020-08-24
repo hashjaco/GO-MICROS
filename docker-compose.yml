@@ -2,15 +2,19 @@ version: '3'
 services:
   go_api:
     build:
-      context: go-rest-api
+      context: ./
+      dockerfile: go-rest-api
     volumes:
       - "api:/usr/src/app/"
     container_name: GO-MICROS
     ports:
       - "8080:8080"
+    expose:
+      - 8080
+    env_file: .env
     tty: true
     depends_on:
-      - db
+      - mysql_db
     networks:
       - go_rest
 
@@ -19,25 +23,43 @@ services:
     container_name: mysql_db
     image: mysql
     command: --default-authentication-plugin=mysql_native_password
-    restart: always
+    restart: on-failure
     build:
-      context: go-rest-api/database
+      context: ./go-rest-api/database/mysql
     environment:
       - MYSQL_ROOT_HOST=${MYSQL_USERS_HOST}
       - MYSQL_USER=${MYSQL_USERS_USERNAME}
       - MYSQL_PASSWORD=${MYSQL_USERS_PASSWORD}
       - MYSQL_DATABASE=${MYSQL_USERS_SCHEMA}
       - MYSQL_ROOT_PASSWORD=${MYSQL_USERS_PASSWORD}
-      volumes:
-        - "mysql_db:/var/lib/mysql"
-      ACCEPT_EULA: "Y"
+    volumes:
+      - "mysql_db:/var/lib/mysql"
+      - "go-rest-api/database/migrations/data:/var/lib/mysql"
+      - "/home/user/db/mysql/init:/docker-entrypoint-initdb.d/:ro"
     ports:
     - "3306:3306"
+    expose:
+      - 3306
     tty: true
     networks:
       - go_rest
 
 
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin_container
+    depends_on:
+      - mysql_db
+    environment:
+      - PMA_HOST=mysql_db
+      - PMA_USER=${DB_USER}
+      - PMA_PORT=${DB_PORT}
+      - PMA_PASSWORD=${DB_PASSWORD}
+    ports:
+      - 9090:80
+    restart: always
+    networks:
+      - go_rest
 
 
 volumes:
