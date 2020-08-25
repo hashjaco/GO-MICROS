@@ -20,14 +20,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfabe99e-d57f-47e9-ac12-c02de7e83afc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/go-rest-api/database/data/users" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go-rest-api/database/mysql/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/auth/token.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/controllers/base.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/controllers/home_controller.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/controllers/login_controller.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/controllers/routes.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/middlewares/middlewares.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/models/User.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/responses/json.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/seed/seeder.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/server.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/utils/format_error/format_error.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/go-rest-api/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-rest-api/controllers/users/users_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/go-rest-api/controllers/users/users_controller.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-rest-api/database/migrations/user_schema.up.sql" beforeDir="false" afterPath="$PROJECT_DIR$/go-rest-api/database/migrations/user_schema.up.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-rest-api/services/users_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/go-rest-api/services/users/users_service.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-rest-api/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/api/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-rest-api/app/application.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-rest-api/app/url_mappings.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-rest-api/config/db_config.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-rest-api/controllers/users/users_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/controllers/users_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-rest-api/database/data/users" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-rest-api/database/migrations/user_schema.down.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-rest-api/database/migrations/user_schema.up.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-rest-api/database/mysql/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-rest-api/database/mysql/users_db/users_db.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-rest-api/domain/users/user_dao.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-rest-api/domain/users/user_dto.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-rest-api/services/users/users_service.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-rest-api/utils/date_utils/date_utils.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/utils/date_utils/date_utils.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-rest-api/utils/errors/errors.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/utils/errors/errors.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go-rest-api/utils/mysql_utils/mysql_utils.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/utils/mysql_utils/mysql_utils.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,11 +93,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/api/controllers" />
       <recent name="$PROJECT_DIR$/go-rest-api/services/users" />
       <recent name="$PROJECT_DIR$/go-rest-api/database" />
       <recent name="$PROJECT_DIR$/go-rest-api/database/mysql" />
       <recent name="$PROJECT_DIR$/go-rest-api" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager" selected="Go Build.go build main.go ">
@@ -187,37 +212,37 @@
     </state>
     <state x="-1964" y="288" key="EnvironmentVariablesDialog/-2560.0.2560.1080/0.0.1440.900@-2560.0.2560.1080" timestamp="1597997406143" />
     <state x="592" y="322" width="826" height="525" key="EnvironmentVariablesDialog/0.0.1440.900@0.0.1440.900" timestamp="1598247322616" />
-    <state width="1419" height="196" key="GridCell.Tab.0.bottom" timestamp="1598262029708">
+    <state width="907" height="196" key="GridCell.Tab.0.bottom" timestamp="1598342257518">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1440" height="320" key="GridCell.Tab.0.bottom/-2560.0.2560.1080/0.0.1440.900@-2560.0.2560.1080" timestamp="1598227956587" />
     <state width="1179" height="354" key="GridCell.Tab.0.bottom/-2560.0.2560.1080/0.23.1440.877@-2560.0.2560.1080" timestamp="1598004913524" />
     <state width="1163" height="305" key="GridCell.Tab.0.bottom/-2560.23.2560.1057/0.23.1440.877@-2560.23.2560.1057" timestamp="1598077394451" />
-    <state width="1419" height="196" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1598262029708" />
+    <state width="907" height="196" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1598342257518" />
     <state width="966" height="258" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1598123745841" />
-    <state width="1419" height="196" key="GridCell.Tab.0.center" timestamp="1598262029707">
+    <state width="907" height="196" key="GridCell.Tab.0.center" timestamp="1598342257517">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1440" height="320" key="GridCell.Tab.0.center/-2560.0.2560.1080/0.0.1440.900@-2560.0.2560.1080" timestamp="1598227956585" />
     <state width="1179" height="354" key="GridCell.Tab.0.center/-2560.0.2560.1080/0.23.1440.877@-2560.0.2560.1080" timestamp="1598004913523" />
     <state width="1163" height="305" key="GridCell.Tab.0.center/-2560.23.2560.1057/0.23.1440.877@-2560.23.2560.1057" timestamp="1598077394450" />
-    <state width="1419" height="196" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1598262029707" />
+    <state width="907" height="196" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1598342257517" />
     <state width="966" height="258" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1598123745833" />
-    <state width="1419" height="196" key="GridCell.Tab.0.left" timestamp="1598262029706">
+    <state width="907" height="196" key="GridCell.Tab.0.left" timestamp="1598342257516">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1440" height="320" key="GridCell.Tab.0.left/-2560.0.2560.1080/0.0.1440.900@-2560.0.2560.1080" timestamp="1598227956583" />
     <state width="1179" height="354" key="GridCell.Tab.0.left/-2560.0.2560.1080/0.23.1440.877@-2560.0.2560.1080" timestamp="1598004913522" />
     <state width="1163" height="305" key="GridCell.Tab.0.left/-2560.23.2560.1057/0.23.1440.877@-2560.23.2560.1057" timestamp="1598077394450" />
-    <state width="1419" height="196" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1598262029706" />
+    <state width="907" height="196" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1598342257516" />
     <state width="966" height="258" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1598123745827" />
-    <state width="1419" height="196" key="GridCell.Tab.0.right" timestamp="1598262029708">
+    <state width="907" height="196" key="GridCell.Tab.0.right" timestamp="1598342257517">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1440" height="320" key="GridCell.Tab.0.right/-2560.0.2560.1080/0.0.1440.900@-2560.0.2560.1080" timestamp="1598227956586" />
     <state width="1179" height="354" key="GridCell.Tab.0.right/-2560.0.2560.1080/0.23.1440.877@-2560.0.2560.1080" timestamp="1598004913523" />
     <state width="1163" height="305" key="GridCell.Tab.0.right/-2560.23.2560.1057/0.23.1440.877@-2560.23.2560.1057" timestamp="1598077394451" />
-    <state width="1419" height="196" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1598262029708" />
+    <state width="907" height="196" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1598342257517" />
     <state width="966" height="258" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1598123745841" />
     <state width="1547" height="358" key="GridCell.Tab.1.bottom" timestamp="1598069690462">
       <screen x="-2560" y="23" width="2560" height="1057" />
@@ -256,10 +281,10 @@
       <screen x="-2560" y="23" width="2560" height="1057" />
     </state>
     <state x="-2261" y="184" width="586" height="735" key="find.popup/-2560.23.2560.1057/0.23.1440.877@-2560.23.2560.1057" timestamp="1598074062340" />
-    <state x="18" y="151" width="670" height="676" key="search.everywhere.popup" timestamp="1598126626807">
+    <state x="18" y="151" width="670" height="676" key="search.everywhere.popup" timestamp="1598322894224">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="18" y="151" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1598126626807" />
+    <state x="18" y="151" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1598322894224" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

@@ -2,7 +2,7 @@ package mysql_utils
 
 import (
 	"github.com/go-sql-driver/mysql"
-	"github.com/hashjaco/GO-MICROS/go-rest-api/utils/errors"
+	"github.com/hashjaco/GO-MICROS/api/utils/errors"
 	"strings"
 )
 
