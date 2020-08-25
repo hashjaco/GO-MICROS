@@ -1,29 +1,72 @@
 version: '3'
 services:
-  db:
-    container_name: granular_db
-    image: mysql
-    command: --default-authentication-plugin=mysql_native_password
-    restart: always
-
+  go_api:
     build:
-      context: go-rest-api/database
-    environment:
-      MYSQL_ROOT_PASSWORD: Ilikethenumber69!
-      MYSQL_DATABASE: users_db
-      MYSQL_USER: root
-      ACCEPT_EULA: "Y"
-    ports:
-    - "3306:3306"
-    tty: true
-  app:
-    build:
-      context: go-rest-api
+      context: ./
+      dockerfile: api
     volumes:
-    - "./go-rest-api:/app"
-    container_name: granular_app
+      - "api:/usr/src/app/"
+    container_name: GO-MICROS
     ports:
-    - "8080:8080"
+      - "8080:8080"
+    expose:
+      - 8080
+    env_file: .env
     tty: true
     depends_on:
-      - db
+      - mysql_db
+    networks:
+      - go_rest
+
+
+  mysql_db:
+    container_name: mysql_db
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: on-failure
+    build:
+      context: api/database/mysql
+    environment:
+      - MYSQL_ROOT_HOST=${MYSQL_USERS_HOST}
+      - MYSQL_USER=${MYSQL_USERS_USERNAME}
+      - MYSQL_PASSWORD=${MYSQL_USERS_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_USERS_SCHEMA}
+      - MYSQL_ROOT_PASSWORD=${MYSQL_USERS_PASSWORD}
+    volumes:
+      - "mysql_db:/var/lib/mysql"
+      - "api/database/migrations/data:/var/lib/mysql"
+      - "/home/user/db/mysql/init:/docker-entrypoint-initdb.d/:ro"
+    ports:
+    - "3306:3306"
+    expose:
+      - 3306
+    tty: true
+    networks:
+      - go_rest
+
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin_container
+    depends_on:
+      - mysql_db
+    environment:
+      - PMA_HOST=mysql_db
+      - PMA_USER=${DB_USER}
+      - PMA_PORT=${DB_PORT}
+      - PMA_PASSWORD=${DB_PASSWORD}
+    ports:
+      - 9090:80
+    restart: always
+    networks:
+      - go_rest
+
+
+volumes:
+  api:
+  mysql_db:
+
+# Networks to be created to facilitate communication between containers
+networks:
+  go_rest:
+    driver: bridge
